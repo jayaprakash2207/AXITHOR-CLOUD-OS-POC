@@ -9,7 +9,7 @@ export default function LoginPage() {
       <div className="pointer-events-none absolute left-10 top-16 h-44 w-44 rounded-full bg-brand-300/20 blur-3xl animate-float-slow" />
       <div className="pointer-events-none absolute bottom-12 right-10 h-52 w-52 rounded-full bg-cyan-400/15 blur-3xl animate-pulse-soft" />
 
-      <div className="glass-panel animate-fade-up w-full max-w-md rounded-[2rem] p-8 shadow-2xl">
+      <div className="animate-fade-up glass-panel w-full max-w-md rounded-[2rem] p-8 shadow-2xl">
         <div className="flex items-center gap-3 text-brand-200">
           <ShieldCheck className="h-5 w-5" />
           <span className="text-xs uppercase tracking-[0.3em]">Authentication</span>

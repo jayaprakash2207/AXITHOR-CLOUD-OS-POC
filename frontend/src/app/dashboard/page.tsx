@@ -95,7 +95,7 @@ export default function DashboardPage() {
           </div>
           <button
             onClick={() => setShowForm(!showForm)}
-            className="hover-lift inline-flex items-center gap-2 rounded-full bg-brand-400 px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-brand-300"
+            className="hover-lift inline-flex items-center gap-2 rounded-full bg-brand-400 px-5 py-2.5 text-sm font-semibold text-slate-950"
           >
             <Plus className="h-4 w-4" />
             New Site
