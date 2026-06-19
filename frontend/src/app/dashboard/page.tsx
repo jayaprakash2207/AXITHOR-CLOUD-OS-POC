@@ -83,16 +83,19 @@ export default function DashboardPage() {
   }, []);
 
   return (
-    <main className="min-h-screen px-6 py-8 text-white sm:px-10 lg:px-16">
+    <main className="relative min-h-screen overflow-hidden px-6 py-8 text-white sm:px-10 lg:px-16">
+      <div className="pointer-events-none absolute left-[-5rem] top-[-4rem] h-56 w-56 rounded-full bg-brand-300/15 blur-3xl animate-float-slow" />
+      <div className="pointer-events-none absolute bottom-10 right-6 h-64 w-64 rounded-full bg-cyan-400/10 blur-3xl animate-pulse-soft" />
+
       <div className="mx-auto max-w-6xl">
-        <header className="mb-10 flex items-center justify-between">
+        <header className="mb-10 flex items-center justify-between animate-fade-up">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-brand-200">Axithor Cloud OS</p>
             <h1 className="mt-2 text-3xl font-semibold">Dashboard</h1>
           </div>
           <button
             onClick={() => setShowForm(!showForm)}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-400 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-brand-300"
+            className="hover-lift inline-flex items-center gap-2 rounded-full bg-brand-400 px-5 py-2.5 text-sm font-semibold text-slate-950 hover:bg-brand-300"
           >
             <Plus className="h-4 w-4" />
             New Site
@@ -108,11 +111,11 @@ export default function DashboardPage() {
             ) : null}
 
             {loading ? (
-              <div className="flex h-64 items-center justify-center rounded-[2rem] border border-white/10 bg-white/5">
+              <div className="glass-panel flex h-64 items-center justify-center rounded-[2rem]">
                 <span className="text-white/40">Loading sites...</span>
               </div>
             ) : sites.length === 0 ? (
-              <div className="flex h-64 flex-col items-center justify-center rounded-[2rem] border border-white/10 bg-white/5 text-center">
+              <div className="glass-panel flex h-64 flex-col items-center justify-center rounded-[2rem] text-center animate-fade-up">
                 <Globe className="h-10 w-10 text-white/20" />
                 <p className="mt-4 text-white/60">No sites deployed yet.</p>
                 <button
@@ -127,7 +130,7 @@ export default function DashboardPage() {
                 {sites.map((site) => (
                   <div
                     key={site.id}
-                    className="group rounded-[2rem] border border-white/10 bg-white/5 p-6 transition hover:border-brand-400/50 hover:bg-white/10"
+                    className="group glass-panel hover-lift rounded-[2rem] p-6 hover:border-brand-400/50 hover:bg-white/10"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-brand-400/10 text-brand-400">
@@ -144,14 +147,14 @@ export default function DashboardPage() {
                         href={`${process.env.NEXT_PUBLIC_API_BASE_URL?.replace('/api/v1', '') ?? 'http://localhost:8000'}/serve/${site.subdomain}/`}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-xs font-semibold hover:bg-white/15"
+                        className="hover-lift inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 text-xs font-semibold hover:bg-white/15"
                       >
                         Visit
                         <ExternalLink className="h-3 w-3" />
                       </a>
                       <Link
                         href={`/dashboard/deploy?site=${site.id}`}
-                        className="inline-flex items-center gap-2 rounded-xl bg-brand-400/20 px-4 py-2 text-xs font-semibold text-brand-300 hover:bg-brand-400/30"
+                        className="hover-lift inline-flex items-center gap-2 rounded-xl bg-brand-400/20 px-4 py-2 text-xs font-semibold text-brand-300 hover:bg-brand-400/30"
                       >
                         <Upload className="h-3 w-3" />
                         Deploy
@@ -180,7 +183,7 @@ export default function DashboardPage() {
 
             <StorageUsageWidget usage={storageUsage} loading={storageLoading} />
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+            <div className="glass-panel rounded-[2rem] p-8">
               <h2 className="font-semibold">Quick Start</h2>
               <ul className="mt-4 space-y-4 text-sm text-white/60">
                 <li className="flex gap-3">

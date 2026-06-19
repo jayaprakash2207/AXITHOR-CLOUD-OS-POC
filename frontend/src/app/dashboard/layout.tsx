@@ -10,12 +10,12 @@ export default function DashboardLayout({ children }: Readonly<{ children: React
             <p className="text-sm text-white/60">Module 1 authentication and user management</p>
           </div>
           <nav className="flex items-center gap-3 text-sm">
-            <Link href="/dashboard" className="rounded-full border border-white/10 px-4 py-2 text-white/75 hover:bg-white/10">
+            <Link href="/dashboard" className="hover-lift rounded-full border border-white/10 px-4 py-2 text-white/75 hover:bg-white/10">
               Dashboard
             </Link>
             <a
               href={`${process.env.NEXT_PUBLIC_API_BASE_URL ?? 'http://localhost:8000/api/v1'}/auth/logout`}
-              className="rounded-full bg-white px-4 py-2 font-semibold text-slate-950 hover:bg-brand-100"
+              className="hover-lift rounded-full bg-white px-4 py-2 font-semibold text-slate-950 hover:bg-brand-100"
             >
               Logout
             </a>

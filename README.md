@@ -44,7 +44,7 @@ You upload a ZIP  →  Backend extracts it  →  Files go to your Google Drive
 Browser visits URL  →  FastAPI fetches from Drive  →  Asset served with perfect headers
 ```
 
-This POC demonstrates the full deployment pipeline, a production-grade static asset serving engine, path-level security hardening, intelligent caching, and a polished dashboard — built entirely from scratch by the Axithor team.
+This POC demonstrates the full deployment pipeline, a production-grade static asset serving engine, path-level security hardening, intelligent caching, and a premium animated dashboard experience — built entirely from scratch by the Axithor team.
 
 ---
 
@@ -94,6 +94,18 @@ This POC demonstrates the full deployment pipeline, a production-grade static as
 </td>
 </tr>
 </table>
+
+---
+
+## 🎨 Experience Polish
+
+The frontend now delivers a more premium, modern product feel:
+
+- **Animated aurora background layers** for depth and motion
+- **Glassmorphism panels** for a high-end cloud control center look
+- **Hover lift interactions** on CTAs and cards for tactile feedback
+- **Soft pulse + float micro-animations** to keep screens lively
+- **Reduced-motion aware behavior** for accessibility
 
 ---
 
