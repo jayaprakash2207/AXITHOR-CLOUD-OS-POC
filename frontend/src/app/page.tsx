@@ -41,7 +41,7 @@ export default function HomePage() {
         </header>
 
         <section className="grid flex-1 gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-12">
-          <div className="max-w-3xl animate-fade-up" style={{ animationDelay: '80ms' }}>
+          <div className="max-w-3xl animate-fade-up animate-delay-80">
             <p className="mb-5 inline-flex items-center rounded-full border border-brand-300/25 bg-brand-300/10 px-4 py-2 text-sm text-brand-100 animate-pulse-soft">
               Production-grade BYOC platform architecture
             </p>
@@ -54,14 +54,14 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/login"
-                className="hover-lift inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950"
+                className="hover-lift inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 hover:bg-brand-100"
               >
                 Start with Google
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/dashboard"
-                className="hover-lift inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white"
+                className="hover-lift inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10"
               >
                 Open dashboard
               </Link>
@@ -70,7 +70,7 @@ export default function HomePage() {
 
           <div className="relative">
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-brand-400/20 blur-3xl" />
-            <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-glow animate-fade-up" style={{ animationDelay: '160ms' }}>
+            <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-glow animate-fade-up animate-delay-160">
               <div className="rounded-3xl border border-white/10 bg-white/5 p-5 hover-lift">
                 <p className="text-sm text-white/55">Connected storage</p>
                 <p className="mt-2 text-2xl font-semibold">Google Drive</p>

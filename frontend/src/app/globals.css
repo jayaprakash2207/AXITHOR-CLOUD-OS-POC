@@ -82,6 +82,14 @@ a {
   animation: fade-up 500ms ease both;
 }
 
+.animate-delay-80 {
+  animation-delay: 80ms;
+}
+
+.animate-delay-160 {
+  animation-delay: 160ms;
+}
+
 .hover-lift {
   transition:
     transform 240ms ease,
@@ -98,7 +106,9 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .animate-float-slow,
   .animate-pulse-soft,
-  .animate-fade-up {
+  .animate-fade-up,
+  .animate-delay-80,
+  .animate-delay-160 {
     animation: none !important;
   }
 
