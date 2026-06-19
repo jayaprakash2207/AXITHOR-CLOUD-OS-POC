@@ -5,8 +5,11 @@ const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? 'http://localhost:800
 
 export default function LoginPage() {
   return (
-    <main className="grid min-h-screen place-items-center px-6 py-12 text-white">
-      <div className="w-full max-w-md rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-xl">
+    <main className="relative grid min-h-screen place-items-center overflow-hidden px-6 py-12 text-white">
+      <div className="pointer-events-none absolute left-10 top-16 h-44 w-44 rounded-full bg-brand-300/20 blur-3xl animate-float-slow" />
+      <div className="pointer-events-none absolute bottom-12 right-10 h-52 w-52 rounded-full bg-cyan-400/15 blur-3xl animate-pulse-soft" />
+
+      <div className="animate-fade-up glass-panel w-full max-w-md rounded-[2rem] p-8 shadow-2xl">
         <div className="flex items-center gap-3 text-brand-200">
           <ShieldCheck className="h-5 w-5" />
           <span className="text-xs uppercase tracking-[0.3em]">Authentication</span>
@@ -18,7 +21,7 @@ export default function LoginPage() {
 
         <a
           href={`${apiBaseUrl}/auth/google/login`}
-          className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-brand-300"
+          className="hover-lift mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-400 px-5 py-3 font-semibold text-slate-950"
         >
           <LogIn className="h-4 w-4" />
           Continue with Google

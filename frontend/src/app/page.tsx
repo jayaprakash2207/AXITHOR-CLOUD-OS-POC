@@ -21,8 +21,11 @@ const features = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen overflow-hidden px-6 py-8 text-white sm:px-10 lg:px-16">
-      <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl flex-col justify-between rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/30 backdrop-blur-2xl">
+    <main className="relative min-h-screen overflow-hidden px-6 py-8 text-white sm:px-10 lg:px-16">
+      <div className="pointer-events-none absolute left-10 top-16 h-48 w-48 rounded-full bg-brand-300/20 blur-3xl animate-float-slow" />
+      <div className="pointer-events-none absolute bottom-12 right-8 h-56 w-56 rounded-full bg-cyan-400/20 blur-3xl animate-pulse-soft" />
+
+      <div className="glass-panel mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl flex-col justify-between rounded-[2rem] shadow-2xl shadow-black/30">
         <header className="flex items-center justify-between border-b border-white/10 px-6 py-5 sm:px-10">
           <div>
             <p className="text-xs uppercase tracking-[0.4em] text-brand-200">Axithor Cloud OS</p>
@@ -38,8 +41,8 @@ export default function HomePage() {
         </header>
 
         <section className="grid flex-1 gap-10 px-6 py-12 sm:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-12">
-          <div className="max-w-3xl">
-            <p className="mb-5 inline-flex items-center rounded-full border border-brand-300/25 bg-brand-300/10 px-4 py-2 text-sm text-brand-100">
+          <div className="max-w-3xl animate-fade-up animate-delay-80">
+            <p className="mb-5 inline-flex items-center rounded-full border border-brand-300/25 bg-brand-300/10 px-4 py-2 text-sm text-brand-100 animate-pulse-soft">
               Production-grade BYOC platform architecture
             </p>
             <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -51,14 +54,14 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/login"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition hover:bg-brand-100"
+                className="hover-lift inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 hover:bg-brand-100"
               >
                 Start with Google
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/dashboard"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+                className="hover-lift inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white hover:bg-white/10"
               >
                 Open dashboard
               </Link>
@@ -67,8 +70,8 @@ export default function HomePage() {
 
           <div className="relative">
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-brand-400/20 blur-3xl" />
-            <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-glow">
-              <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <div className="grid gap-4 rounded-[2rem] border border-white/10 bg-slate-950/70 p-6 shadow-glow animate-fade-up animate-delay-160">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-5 hover-lift">
                 <p className="text-sm text-white/55">Connected storage</p>
                 <p className="mt-2 text-2xl font-semibold">Google Drive</p>
                 <p className="mt-2 text-sm text-white/65">Drive folders become deployable site roots.</p>
@@ -77,7 +80,7 @@ export default function HomePage() {
                 {features.map((feature) => {
                   const Icon = feature.icon;
                   return (
-                    <div key={feature.title} className="rounded-3xl border border-white/10 bg-white/5 p-4">
+                    <div key={feature.title} className="hover-lift rounded-3xl border border-white/10 bg-white/5 p-4">
                       <Icon className="h-5 w-5 text-brand-300" />
                       <h2 className="mt-4 font-semibold text-white">{feature.title}</h2>
                       <p className="mt-2 text-sm leading-6 text-white/65">{feature.description}</p>
